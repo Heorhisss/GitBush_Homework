@@ -1,0 +1,86 @@
+1) Посмотреть где я 
+-pwd
+
+2)Создать папку 
+-mkdir foldername
+
+3)Зайти в папку
+-cd foldername
+
+4)Создать 3 папки
+-mkdir foldername_1 foldername_2 foldername_3
+
+5)Зайти в любую папку
+-cd foldername
+
+6)Создать 5 файлов (3 txt, 2 json)
+-touch file_1.txt file_2.txt file_3.txt file_01.json file_02.json
+
+7)Создать 3 папки
+-mkdir foldername_01 foldername_02 foldername_03
+
+8)Вывести список содержимого папки
+-ls
+
+9,10,11) Открыть txt файл, вписать что то и сохранить
+-nano filename.txt
+
+12) Выйти из папки на уровень выше
+-cd ..
+
+13)Переместить любые 2 файла которые вы создали в любую другую папку
+-mv foldername/*.json foldername
+
+14)Скопировать любые 2 файла, которые вы создали, в любую другую папку
+-cp foldername/*.json foldername
+
+15)Найти файл по имени
+-find . -name filename
+
+16)посмотреть содержимое в реальном
+-tail -F foldername/filename 
+
+17)Вывести несколько первых строк из текстового файла
+-head -n(количество строк) foldername/filename.txt
+
+18)Вывести несколько последних строк из текстового файла
+-tail -n(количество строк) foldername/filename.txt
+
+19)Посмотреть содержимое длинного файла
+-less foldername/filename
+
+20)Вывести дату и время
+-date
+______________________________________________________________
+
+Задание *
+
+1)Отправить http запрос на сервер.
+-curl http://162.55.220.72:5005/terminal-hw-request
+-curl "http://162.55.220.72:5005/get_method?name=Heorh
+i&age=32"
+______________________________________________________________
+2)Написать скрипт который выполнит автоматически пункты 3-4-5-6-7-8-13
+-nano scriptname.sh
+
+-#!/bin/bash
+
+-cd foldername
+
+-mkdir foldername_1 foldername_2 foldername_3
+
+-cd foldername
+
+-touch filename_1.txt filename_2.txt filename_3.txt filename1.json filename2.json
+
+-mkdir foldername_1 foldername_2 foldername_3
+
+-ls -la
+
+-mv filename_1 filename_2 foldername/
+
+Для запуска скрипта в терминале используем команду 
+-bash scriptname.sh
+
+либо предварительно присвоив файлу права
+-./scriptname.sh
